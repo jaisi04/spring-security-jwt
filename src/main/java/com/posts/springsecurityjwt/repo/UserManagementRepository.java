@@ -630,7 +630,6 @@ public class UserManagementRepository {
                 List<Posts> listOfPosts = baseList.stream()
                         .filter(Posts -> Posts.getTitle().startsWith(title)).collect(Collectors.toList());
                 return listOfPosts;
-               // Stream.of(baseList).filter(posts -> posts.stream().allMatch()).collect(Collectors.toList());
             }
             for (int i = pageNo * pageSize - pageSize; i < pageNo*pageSize; i++){
                 paginationList.add(baseList.get(i));
